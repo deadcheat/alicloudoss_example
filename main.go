@@ -58,12 +58,12 @@ func main() {
 		}
 		wg.Add(1)
 		filePath := filepath.Join(abPath, f.Name())
-		go func(name, path string) {
+		go func(objectKey, path string) {
 			fmt.Println("upload:", path)
 			defer wg.Done()
 			s.Acquire(context.Background(), UploadTaskWeight)
 			defer s.Release(UploadTaskWeight)
-			err = b.UploadFile(name, path, UploadChunkSize)
+			err = b.UploadFile(objectKey, path, UploadChunkSize)
 			if err != nil {
 				errChan <- err
 			}
