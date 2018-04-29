@@ -16,7 +16,7 @@ import (
 
 const (
 	UploadChunkSize   int64 = 100 * 1024
-	UploadConcurrency       = 50
+	UploadConcurrency       = 30
 	UploadTaskWeight        = 1
 )
 
