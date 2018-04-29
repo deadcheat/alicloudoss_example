@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	UploadChunkSize   int64 = 100 * 1024
+	UploadPartSize    int64 = 100 * 1024
 	UploadConcurrency       = 30
 	UploadTaskWeight        = 1
 )
@@ -63,7 +63,7 @@ func main() {
 			defer wg.Done()
 			s.Acquire(context.Background(), UploadTaskWeight)
 			defer s.Release(UploadTaskWeight)
-			err = b.UploadFile(objectKey, path, UploadChunkSize)
+			err = b.UploadFile(objectKey, path, UploadPartSize)
 			if err != nil {
 				errChan <- err
 			}
