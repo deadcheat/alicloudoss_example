@@ -1,0 +1,8 @@
+package main
+
+var (
+	AccessKeyID     = "<your access key id>"
+	AccessKeySecret = "<your access key secret>"
+	BucketName      = "<your bucket name>"
+	Endpoint        = "<your endpoint>"
+)

@@ -1,0 +1,20 @@
+hash: 4aa4855d1c304fd889de965f5aec6e5b854614158f4d234a16db12f966ffe9de
+updated: 2018-04-30T03:36:33.527737+09:00
+imports:
+- name: github.com/aliyun/aliyun-oss-go-sdk
+  version: 52de7239022ceba47354832fbcc65983aa8d019d
+  subpackages:
+  - oss
+- name: github.com/apex/log
+  version: ff0f66940b829dc66c81dad34746d4349b83eb9e
+- name: github.com/pkg/errors
+  version: 816c9085562cd7ee03e7f8188a1cfd942858cded
+- name: golang.org/x/net
+  version: 5f9ae10d9af5b1c89ae6904293b14b064d4ada23
+  subpackages:
+  - context
+- name: golang.org/x/sync
+  version: 1d60e4601c6fd243af51cc01ddf169918a5407ca
+  subpackages:
+  - semaphore
+testImports: []

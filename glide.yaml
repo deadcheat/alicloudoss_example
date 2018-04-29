@@ -1,0 +1,6 @@
+package: github.com/deadcheat/alicloudoss_example
+import:
+- package: github.com/aliyun/aliyun-oss-go-sdk
+  version: ~1.8.0
+  subpackages:
+  - oss
