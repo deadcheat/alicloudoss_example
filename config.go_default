@@ -1,6 +1,6 @@
 package main
 
-var (
+const (
 	AccessKeyID     = "<your access key id>"
 	AccessKeySecret = "<your access key secret>"
 	BucketName      = "<your bucket name>"
