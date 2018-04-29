@@ -16,7 +16,7 @@ import (
 
 const (
 	UploadPartSize    int64 = 100 * 1024
-	UploadConcurrency       = 30
+	UploadConcurrency       = 20
 	UploadTaskWeight        = 1
 )
 
@@ -67,6 +67,11 @@ func main() {
 			if err != nil {
 				errChan <- err
 			}
+			// if you want change object's ACL
+			// err = b.SetObjectACL(objectKey, oss.ACLPublicRead)
+			// if err != nil {
+			// 	errChan <- err
+			// }
 		}(f.Name(), filePath)
 	}
 	go func() {
